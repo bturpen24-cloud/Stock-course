@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside id="sidebar" class="glass-sidebar">
+  <h2 class="sidebar-title">📘 Your Course</h2>
+
+  <nav class="nav-links">
+    <a href="index.html" class="active">🏠 Dashboard</a>
+    <a href="lesson1.html">📘 Lesson 1</a>
+    <a href="lesson2.html">📘 Lesson 2</a>
+    <a href="progress.html">📊 Progress</a>
+  </nav>
+
+  <div class="sidebar-stats">
+    <div class="xp-box">
+      <div class="xp-label">XP</div>
+      <div class="xp-bar"><div id="xpFill"></div></div>
+      <div id="xpValue">0 XP</div>
+    </div>
+
+    <div class="streak-box">
+      🔥 Streak: <span id="streakValue">0</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="dashboard-main">
+
+  <!-- HERO -->
+  <section class="hero-card">
+    <div>
+      <h1 class="hero-title">Welcome Back</h1>
+      <p class="hero-subtitle">
+        Track your XP, level up your system, and keep your streak alive.
+      </p>
+    </div>
+
+    <div class="level-ring">
+      <svg width="120" height="120">
+        <circle cx="60" cy="60" r="50" class="ring-bg"></circle>
+        <circle cx="60" cy="60" r="50" class="ring-fill" id="levelRing"></circle>
+      </svg>
+      <div class="level-number" id="levelValue">1</div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-grid">
+    <div class="glass-card stat-card">
+      <h3>Total XP</h3>
+      <p class="stat-value" id="totalXPValue">0</p>
+      <div class="mini-bar">
+        <div id="progressXPBarFill"></div>
+      </div>
+    </div>
+
+    <div class="glass-card stat-card">
+      <h3>Current Level</h3>
+      <p class="stat-value" id="levelValueDisplay">1</p>
+    </div>
+
+    <div class="glass-card stat-card">
+      <h3>Daily Streak</h3>
+      <p class="stat-value">
+        <span id="streakValueDashboard">0</span> 🔥
+      </p>
+    </div>
+  </section>
+
+  <!-- LESSON STATUS -->
+  <section class="card gradient-card">
+    <h2>📘 Lessons</h2>
+    <p class="lesson-subtitle">
+      Your lesson status updates automatically as you progress.
+    </p>
+
+    <ul class="action-list">
+      <li>
+        Lesson 1 — Foundations & Mindset
+        <span id="lesson1Status">Locked</span>
+      </li>
+      <li>
+        Lesson 2 — Systems & Consistency
+        <span id="lesson2Status">Locked</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- STREAK INFO -->
+  <section class="card gradient-card">
+    <h2>🔥 Daily Streak</h2>
+    <p class="lesson-subtitle">
+      Your streak increases when you earn XP on a new day.
+    </p>
+    <p style="margin-top:8px;">
+      Current streak: <strong><span id="streakValueDashboard">0</span> days</strong>
+    </p>
+  </section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
