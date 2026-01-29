@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>📊 Progress</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<aside id="sidebar" class="glass-sidebar">
+  <h2 class="sidebar-title">📘 Your Course</h2>
+
+  <nav class="nav-links">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="lesson1.html">📘 Lesson 1</a>
+    <a href="lesson2.html">📘 Lesson 2</a>
+    <a href="progress.html" class="active">📊 Progress</a>
+  </nav>
+
+  <div class="sidebar-stats">
+    <div class="xp-box">
+      <div class="xp-label">XP</div>
+      <div class="xp-bar"><div id="xpFill"></div></div>
+      <div id="xpValue">0 XP</div>
+    </div>
+
+    <div class="streak-box">
+      🔥 Streak: <span id="streakValue">0</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main>
+
+  <!-- HEADER -->
+  <section class="card gradient-card">
+    <h1 class="lesson-title">📊 Your Progress</h1>
+    <p class="lesson-subtitle">See how your XP, levels, and lessons are compounding over time.</p>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+  </section>
+
+  <!-- TOP SUMMARY -->
+  <section class="stats-grid">
+    <div class="glass-card stat-card">
+      <h3>Total XP</h3>
+      <p class="stat-value" id="progressTotalXP">0</p>
+      <div class="mini-bar"><div id="progressXPBarFill"></div></div>
+    </div>
+
+    <div class="glass-card stat-card">
+      <h3>Level</h3>
+      <p class="stat-value" id="progressLevel">1</p>
+    </div>
+
+    <div class="glass-card stat-card">
+      <h3>Daily Streak</h3>
+      <p class="stat-value"><span id="streakValueProgress">0</span> 🔥</p>
+    </div>
+  </section>
+
+  <!-- CHARTS LAYOUT -->
+  <section class="progress-layout">
+
+    <!-- XP OVER TIME (BAR CHART) -->
+    <div class="card chart-card">
+      <h2>📈 XP Momentum</h2>
+      <p class="lesson-subtitle">Visualize how your XP has been building recently.</p>
+
+      <div class="chart-bars">
+        <div class="chart-bar">
+          <div class="chart-bar-fill" id="xpBar1"></div>
+          <div class="chart-bar-label">Day 1</div>
+        </div>
+        <div class="chart-bar">
+          <div class="chart-bar-fill" id="xpBar2"></div>
+          <div class="chart-bar-label">Day 2</div>
+        </div>
+        <div class="chart-bar">
+          <div class="chart-bar-fill" id="xpBar3"></div>
+          <div class="chart-bar-label">Day 3</div>
+        </div>
+        <div class="chart-bar">
+          <div class="chart-bar-fill" id="xpBar4"></div>
+          <div class="chart-bar-label">Day 4</div>
+        </div>
+        <div class="chart-bar">
+          <div class="chart-bar-fill" id="xpBar5"></div>
+          <div class="chart-bar-label">Day 5</div>
+        </div>
+      </div>
+
+      <p class="lesson-subtitle" style="margin-top:10px;">Bars animate as XP updates, giving you a sense of momentum.</p>
+    </div>
+
+    <!-- LESSON COMPLETION (RADIAL CHART) -->
+    <div class="card chart-card">
+      <h2>📘 Lesson Completion</h2>
+      <p class="lesson-subtitle">See how much of the core path you’ve finished.</p>
+
+      <div class="radial-wrapper">
+        <div class="radial-chart">
+          <svg width="120" height="120">
+            <circle cx="60" cy="60" r="50" class="radial-bg"></circle>
+            <circle cx="60" cy="60" r="50" class="radial-fill" id="lessonRadial"></circle>
+          </svg>
+          <div class="radial-center" id="lessonCompletionPercent">0%</div>
+        </div>
+
+        <div class="radial-legend">
+          <p><strong>Lesson 1:</strong> <span id="progressLesson1Status">Locked</span></p>
+          <p><strong>Lesson 2:</strong> <span id="progressLesson2Status">Locked</span></p>
+          <p style="margin-top:6px;">As you complete lessons, this ring fills and glows.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BADGES -->
+  <section class="card gradient-card">
+    <h2>🏅 Badges</h2>
+    <p class="lesson-subtitle">Badges unlock automatically as your XP and completion grow.</p>
+
+    <ul class="action-list" style="margin-top:10px;">
+      <li id="badgeStarter">Starter — Reach 50 XP</li>
+      <li id="badgeCommitted">Committed — Reach 200 XP</li>
+      <li id="badgeSystemBuilder">System Builder — Complete Lesson 2</li>
+    </ul>
+  </section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+<script>
+  // Optional: light animation hooks if you want to drive charts from JS later.
+  // These IDs are ready for your main.js to manipulate:
+  // xpBar1..xpBar5 (height%), lessonRadial (stroke-dashoffset), lessonCompletionPercent (text).
+</script>
+</body>
+</html>

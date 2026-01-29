@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 2 — Systems & Consistency</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body data-lesson="2">
+
+<!-- SIDEBAR -->
+<aside id="sidebar" class="glass-sidebar">
+  <h2 class="sidebar-title">📘 Your Course</h2>
+
+  <nav class="nav-links">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="lesson1.html">📘 Lesson 1</a>
+    <a href="lesson2.html" class="active">📘 Lesson 2</a>
+    <a href="progress.html">📊 Progress</a>
+  </nav>
+
+  <div class="sidebar-stats">
+    <div class="xp-box">
+      <div class="xp-label">XP</div>
+      <div class="xp-bar"><div id="xpFill"></div></div>
+      <div id="xpValue">0 XP</div>
+    </div>
+
+    <div class="streak-box">
+      🔥 Streak: <span id="streakValue">0</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main>
+
+  <!-- HEADER -->
+  <section class="card gradient-card">
+    <h1 class="lesson-title">Lesson 2 — Systems & Consistency</h1>
+    <p class="lesson-subtitle">Turn your identity into a repeatable, low-friction system that survives bad days.</p>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="card gradient-card">
+    <h2>🎥 Video Lesson</h2>
+    <p class="lesson-subtitle">Tap the thumbnail to open the video in a clean popup view.</p>
+    <div class="video-thumbnail" onclick="openVideo('U_nzqnXWvSo')">
+  <img src="https://img.youtube.com/vi/U_nzqnXWvSo/maxresdefault.jpg">
+  <div class="play-button">▶</div>
+</div>
+
+  </section>
+
+  <!-- SPIN WHEEL -->
+  <section class="card gradient-card">
+    <h2>🎰 Spin for a Systems Reminder</h2>
+    <p class="lesson-subtitle">Click to spin. You’ll only earn XP once per spin.</p>
+    <button class="spin-btn" onclick="spinWheel()">SPIN</button>
+    <div id="spinResult" class="spin-result"></div>
+  </section>
+
+  <!-- REVEAL CARDS -->
+  <section class="card gradient-card">
+    <h2>🃏 Tap to Reveal System Principles</h2>
+    <div class="reveal-grid">
+      <div class="reveal-card" onclick="revealCard(this, 1)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 2)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 3)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 4)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 5)">?</div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="card gradient-card">
+    <h2>🧪 Mini Quiz</h2>
+
+    <div class="quiz-question" data-answered="false">
+      <p><strong>1. A good system feels:</strong></p>
+      <button onclick="answerQuiz(this, true)">Light and repeatable</button>
+      <button onclick="answerQuiz(this, false)">Heavy and heroic</button>
+      <button onclick="answerQuiz(this, false)">Random and emotional</button>
+      <button onclick="answerQuiz(this, false)">Complicated and fragile</button>
+    </div>
+
+    <div class="quiz-question" data-answered="false">
+      <p><strong>2. Consistency comes from:</strong></p>
+      <button onclick="answerQuiz(this, true)">Designing around your real life</button>
+      <button onclick="answerQuiz(this, false)">Waiting for motivation</button>
+      <button onclick="answerQuiz(this, false)">Copying someone else exactly</button>
+      <button onclick="answerQuiz(this, false)">Changing plans every week</button>
+    </div>
+
+    <div id="quizFeedback"></div>
+  </section>
+
+  <!-- ACTION STEPS -->
+  <section class="card gradient-card">
+    <h2>🚀 Apply This Now</h2>
+    <ul class="action-list">
+      <li onclick="completeAction(this)">Define your minimum weekly investing action</li>
+      <li onclick="completeAction(this)">Pick a fixed day and time for review</li>
+      <li onclick="completeAction(this)">Write one rule to protect your system</li>
+      <li onclick="completeAction(this)">Remove one friction from your process</li>
+    </ul>
+  </section>
+
+  <!-- COMPLETION -->
+  <section class="card gradient-card">
+    <h2>🎉 Finish Lesson 2</h2>
+    <button class="complete-btn" onclick="completeLesson()">Mark Lesson Complete</button>
+    <div id="completionMessage"></div>
+  </section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

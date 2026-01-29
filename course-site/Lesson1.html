@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 1 — Foundations & Mindset</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body data-lesson="1">
+
+<!-- SIDEBAR -->
+<aside id="sidebar" class="glass-sidebar">
+  <h2 class="sidebar-title">📘 Your Course</h2>
+
+  <nav class="nav-links">
+    <a href="index.html">🏠 Dashboard</a>
+    <a href="lesson1.html" class="active">📘 Lesson 1</a>
+    <a href="lesson2.html">📘 Lesson 2</a>
+    <a href="progress.html">📊 Progress</a>
+  </nav>
+
+  <div class="sidebar-stats">
+    <div class="xp-box">
+      <div class="xp-label">XP</div>
+      <div class="xp-bar"><div id="xpFill"></div></div>
+      <div id="xpValue">0 XP</div>
+    </div>
+
+    <div class="streak-box">
+      🔥 Streak: <span id="streakValue">0</span>
+    </div>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main>
+
+  <!-- HEADER -->
+  <section class="card gradient-card">
+    <h1 class="lesson-title">Lesson 1 — Foundations & Mindset</h1>
+    <p class="lesson-subtitle">Build your investing identity with interactive tools and mindset mastery.</p>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="card gradient-card">
+    <h2>🎥 Video Lesson</h2>
+    <p class="lesson-subtitle">Tap the thumbnail to open the video in a clean popup view.</p>
+    <div class="video-thumbnail" onclick="openVideo('WEDIj9JBTC8')">
+  <img src="https://img.youtube.com/vi/WEDIj9JBTC8/maxresdefault.jpg">
+  <div class="play-button">▶</div>
+</div>
+
+  </section>
+
+  <!-- SPIN WHEEL -->
+  <section class="card gradient-card">
+    <h2>🎰 Spin for a Mindset Boost</h2>
+    <p class="lesson-subtitle">Click to spin. You’ll only earn XP once per spin.</p>
+    <button class="spin-btn" onclick="spinWheel()">SPIN</button>
+    <div id="spinResult" class="spin-result"></div>
+  </section>
+
+  <!-- REVEAL CARDS -->
+  <section class="card gradient-card">
+    <h2>🃏 Tap to Reveal Core Concepts</h2>
+    <div class="reveal-grid">
+      <div class="reveal-card" onclick="revealCard(this, 1)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 2)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 3)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 4)">?</div>
+      <div class="reveal-card" onclick="revealCard(this, 5)">?</div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="card gradient-card">
+    <h2>🧪 Mini Quiz</h2>
+
+    <div class="quiz-question" data-answered="false">
+      <p><strong>1. Investing is primarily about:</strong></p>
+      <button onclick="answerQuiz(this, true)">Owning assets that grow over time</button>
+      <button onclick="answerQuiz(this, false)">Timing the market</button>
+      <button onclick="answerQuiz(this, false)">Following hype</button>
+      <button onclick="answerQuiz(this, false)">Getting rich fast</button>
+    </div>
+
+    <div class="quiz-question" data-answered="false">
+      <p><strong>2. The biggest danger for beginners is:</strong></p>
+      <button onclick="answerQuiz(this, true)">Emotional decisions</button>
+      <button onclick="answerQuiz(this, false)">Not enough money</button>
+      <button onclick="answerQuiz(this, false)">Not watching charts</button>
+      <button onclick="answerQuiz(this, false)">Picking the wrong stock</button>
+    </div>
+
+    <div id="quizFeedback"></div>
+  </section>
+
+  <!-- ACTION STEPS -->
+  <section class="card gradient-card">
+    <h2>🚀 Apply This Now</h2>
+    <ul class="action-list">
+      <li onclick="completeAction(this)">Write your personal investing goal</li>
+      <li onclick="completeAction(this)">Identify your risk tolerance</li>
+      <li onclick="completeAction(this)">Commit to a long-term mindset</li>
+      <li onclick="completeAction(this)">Choose one emotional habit to improve</li>
+    </ul>
+  </section>
+
+  <!-- COMPLETION -->
+  <section class="card gradient-card">
+    <h2>🎉 Finish Lesson 1</h2>
+    <button class="complete-btn" onclick="completeLesson()">Mark Lesson Complete</button>
+    <div id="completionMessage"></div>
+  </section>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
